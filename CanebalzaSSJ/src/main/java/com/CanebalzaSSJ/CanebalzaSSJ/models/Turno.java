@@ -17,7 +17,7 @@ public class Turno{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	private int idTurno;
+	private int idTurno; /*tablas db*/
 	private int idPaciente;
 	private int idMedico;
 	private String especialidad;
@@ -30,7 +30,7 @@ public class Turno{
 	
 	
 	
-	public int getId() {
+	public int getId() { 
 		return id;
 	}
 	public void setId(int id) {
