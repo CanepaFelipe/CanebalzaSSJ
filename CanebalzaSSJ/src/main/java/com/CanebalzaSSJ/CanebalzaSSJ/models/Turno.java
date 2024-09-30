@@ -17,7 +17,7 @@ public class Turno{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	private int idTurno; /*tablas db*/
+	private int idTurno; 
 	private int idPaciente;
 	private int idMedico;
 	private String especialidad;

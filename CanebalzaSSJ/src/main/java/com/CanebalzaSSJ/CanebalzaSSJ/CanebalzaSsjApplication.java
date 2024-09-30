@@ -1,4 +1,4 @@
-package com.CanebalzaSSJ.CanebalzaSSJ;
+	package com.CanebalzaSSJ.CanebalzaSSJ;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
