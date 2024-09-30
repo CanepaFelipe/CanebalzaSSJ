@@ -19,18 +19,16 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>fecha</th>
-					<th>especialidad</th>
-					<th>hora</th>
-					<th>estado</th>
-					<th>action</th>
+					<th>Fecha</th>
+					<th>Especialidad</th>
+					<th>Hora de creacion</th>
+					<th>Estado</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="turno : ${turnos}">
 
-					<td th:text="${turno.id}" /></td>
 					<td th:text="${turno.id}" /></td>
 					<td th:text="${turno.fecha}" /></td>
 					<td th:text="${turno.especialidad}" /></td>
