@@ -47,9 +47,9 @@ public class PatientControler {
 	@PutMapping("/patient/update/{id}")
 	public Patient updatePatients(@PathVariable int id, @RequestBody Patient updatePatient) {
 		Patient patient = repo.findById(id).get();
-		patient.setBranch(updatePatient.getBranch());
+		patient.setDoctor(updatePatient.getDoctor());
 		patient.setName(updatePatient.getName());
-		patient.setPorcentage(updatePatient.getPorcentage());
+		patient.setAppointment(updatePatient.getAppointment());
 		repo.save(patient);
 		return patient;
 	}

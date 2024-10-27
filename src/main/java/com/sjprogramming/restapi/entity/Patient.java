@@ -7,6 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.sql.Date;
+
 @Entity
 @Table(name = "Patient")
 public class Patient {
@@ -14,21 +16,21 @@ public class Patient {
 @GeneratedValue(strategy = GenerationType.IDENTITY)/*CREA AUTOMATICAMENTE EL NUMERO DE LISTA*/
 
 	private int rollNo;
-@Column(name = "patient_name")/*solo nom del student*/
+@Column(name = "patient_name")/*solo nom del paciente*/
 	private String name;
-@Column(name = "patient_porcentage")
-	private float porcentage;
-@Column(name = "patient_branch")
-	private String branch;
+@Column(name = "patient_appointment")
+	private Date appointment;
+@Column(name = "patient_doctor")
+	private String doctor ;
 public Patient() {
 	
 }
 
-public Patient(String name, float porcentage, String branch) {
+public Patient(String name, Date appointment, String doctor) {
 	super();
 	this.name = name;
-	this.porcentage = porcentage;
-	this.branch = branch;
+	this.appointment = appointment;
+	this.doctor = doctor;
 }
 
 public int getRollNo() {
@@ -43,21 +45,21 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public float getPorcentage() {
-	return porcentage;
+public Date getAppointment() {
+	return appointment;
 }
-public void setPorcentage(float porcentage) {
-	this.porcentage = porcentage;
+public void setAppointment(Date appointment) {
+	this.appointment = appointment;
 }
-public String getBranch() {
-	return branch;
+public String getDoctor() {
+	return doctor;
 }
-public void setBranch(String branch) {
-	this.branch = branch;
+public void setDoctor(String doctor) {
+	this.doctor = doctor;
 }
 @Override
 public String toString() {
-	return "Patient [rollNo=" + rollNo + ", name=" + name + ", porcentage=" + porcentage + ", branch=" + branch + "]";
+	return "Patient [rollNo=" + rollNo + ", Name=" + name + ", Appointment=" + appointment + ", Doctor=" + doctor + "]";
 }
 
 }
