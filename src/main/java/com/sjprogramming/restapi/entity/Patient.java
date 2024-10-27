@@ -8,23 +8,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name = "Patient")
+public class Patient {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)/*CREA AUTOMATICAMENTE EL NUMERO DE LISTA*/
 
 	private int rollNo;
-@Column(name = "student_name")/*solo nom del student*/
+@Column(name = "patient_name")/*solo nom del student*/
 	private String name;
-@Column(name = "student_porcentage")
+@Column(name = "patient_porcentage")
 	private float porcentage;
-@Column(name = "student_branch")
+@Column(name = "patient_branch")
 	private String branch;
-public Student() {
+public Patient() {
 	
 }
 
-public Student(String name, float porcentage, String branch) {
+public Patient(String name, float porcentage, String branch) {
 	super();
 	this.name = name;
 	this.porcentage = porcentage;
@@ -57,7 +57,7 @@ public void setBranch(String branch) {
 }
 @Override
 public String toString() {
-	return "Student [rollNo=" + rollNo + ", name=" + name + ", porcentage=" + porcentage + ", branch=" + branch + "]";
+	return "Patient [rollNo=" + rollNo + ", name=" + name + ", porcentage=" + porcentage + ", branch=" + branch + "]";
 }
 
 }
