@@ -43,7 +43,7 @@ public class PatientControler {
 		repo.save(patient);
 	}
 
-	/* modifica al paciente metodo update */
+	/* modifica al paciente metodo put */
 	@PutMapping("/patient/update/{id}")
 	public Patient updatePatients(@PathVariable int id, @RequestBody Patient updatePatient) {
 		Patient patient = repo.findById(id).get();
@@ -53,7 +53,7 @@ public class PatientControler {
 		repo.save(patient);
 		return patient;
 	}
-/*borra paciente metodo update*/
+/*borra paciente metodo delete*/
 	@DeleteMapping("/patient/delete/{id}")
 	public void removePatient(@PathVariable int id) {
 		Patient patient = repo.findById(id).get();
